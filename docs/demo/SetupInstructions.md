@@ -1,0 +1,6 @@
+# Setup Instructions
+The Talaria 6 family is a suite of comprehensive SoCs featuring ultra-low-power Wi-Fi 7, multi-protocol connectivity, and enhanced cybersecurity. By integrating the high-performance Green Tea Studio™ (GTS) development environment, the Talaria 6 platform provides a trusted, secure, and fast path to commercial-grade IoT solutions.
+
+--8<-- "docs/snippets/t6-summary.md"
+
+For an overview, please refer to the [Introduction](Introduction.md).

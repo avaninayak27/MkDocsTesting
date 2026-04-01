@@ -166,6 +166,8 @@ extra_css:
   - assets/css/extra.css
 
 extra:
+  version:
+    provider: mike
   internal: false
   social:
     - icon: fontawesome/brands/github

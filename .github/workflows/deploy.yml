@@ -55,6 +55,9 @@ jobs:
             echo "Tag detected. Building Release Version: $VERSION"
             mike deploy --push --update-aliases $VERSION latest
             
+            # Automatically redirect the root URL to 'latest'
+            mike set-default --push latest
+            
           else
             echo "Branch detected. Building Rolling Edge version: main"
             mike deploy --push main

@@ -1,0 +1,8 @@
+/* Wider content area for eval */
+.md-grid { max-width: 1400px; }
+
+/* Subtle eval banner tint */
+.md-header { box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+
+/* Improve table readability */
+.md-typeset table:not([class]) th { background-color: var(--md-primary-fg-color); color: var(--md-primary-bg-color); }

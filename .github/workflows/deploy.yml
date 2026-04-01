@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - '*' # Trigger on any tag
 
 jobs:
   build-and-deploy:
@@ -11,24 +13,49 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Required for mike to check out the underlying gh-pages history
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install all dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs-material mkdocs-section-index mkdocs-glightbox mkdocs-minify-plugin mkdocs-awesome-pages-plugin
+          python -m pip install \
+            mkdocs \
+            mkdocs-material \
+            mkdocs-section-index \
+            mkdocs-glightbox \
+            mkdocs-minify-plugin \
+            mkdocs-redirects \
+            mkdocs-include-markdown-plugin \
+            mkdocs-macros-plugin \
+            mkdocs-table-reader-plugin \
+            "mkdocstrings[python]" \
+            mkdocs-swagger-ui-tag \
+            pymdown-extensions \
+            mike
 
-      - name: Build Public Site
-        run: mkdocs build -f mkdocs.yml
-
-      - name: Build Internal Site
+      - name: Configure Git Environment
         run: |
-          if [ -f "mkdocs-internal.yml" ]; then
-            mkdocs build -f mkdocs-internal.yml
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy Versioned Site using Mike
+        run: |
+          if [[ $GITHUB_REF == refs/tags/* ]]; then
+            # Extract the raw tag name
+            RAW_TAG=${GITHUB_REF#refs/tags/}
+            # Remove a leading 'v' if it exists (e.g., 'v1.0' -> '1.0')
+            VERSION=${RAW_TAG#v}
+            
+            echo "Tag detected. Building Release Version: $VERSION"
+            mike deploy --push --update-aliases $VERSION latest
+            
           else
-            echo "Internal config not found, skipping."
+            echo "Branch detected. Building Rolling Edge version: main"
+            mike deploy --push main
           fi

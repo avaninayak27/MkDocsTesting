@@ -1,0 +1,8 @@
+version: "1.0.0"
+product: "Docs Appliance"
+org: "Your Organisation"
+support_email: "docs@your-org.example"
+tools:
+  - MkDocs
+  - Docusaurus
+  - Sphinx

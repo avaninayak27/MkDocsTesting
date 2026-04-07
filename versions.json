@@ -10,6 +10,11 @@
     "aliases": []
   },
   {
+    "version": "latest-internal",
+    "title": "Latest (Internal)",
+    "aliases": []
+  },
+  {
     "version": "latest",
     "title": "latest",
     "aliases": []

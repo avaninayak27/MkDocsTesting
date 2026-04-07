@@ -12,6 +12,8 @@ nav:
   - Products:
       - Overview: products/index.md
       - Common Platform: products/common/platform.md
+      - Low Latency: products/low-latency.md
+      - Application Processor Subsystem: products/application-processor-subsystem.md
       - He (Ultra-Low-Power):
           - Getting Started: products/he/getting-started.md
       - Ne (Multi-Protocol):
@@ -126,4 +128,6 @@ markdown_extensions:
 
 # This is the key difference – we enable the 'internal' flag for macros
 extra:
+  version:
+    provider: mike
   internal: true

@@ -28,7 +28,7 @@ The Ne includes all [Common Platform](../common/platform.md) capabilities, plus:
 - BLE 5.3 with direction finding
 - Concurrent Wi-Fi + BLE operation
 
-{% if internal %}
+{% if extra.internal %}
 ## Internal: Ne Sampling Notes
 
 > [!CAUTION] ENGINEERING ONLY

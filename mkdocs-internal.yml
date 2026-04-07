@@ -111,7 +111,8 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.critic
   - pymdownx.smartsymbols
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path: ["docs"]
   - tables
   - footnotes
   - attr_list

@@ -37,6 +37,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
   font:
     text: Roboto
     code: Roboto Mono
@@ -73,7 +74,7 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.tooltips
-    - header.autohide
+    - navigation.tabs
 
 plugins:
   - search:
@@ -144,7 +145,8 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.critic
   - pymdownx.smartsymbols
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path: ["docs"]
   - tables
   - footnotes
   - attr_list
@@ -160,6 +162,7 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/contrib/auto-render.min.js
   - assets/js/katex.js
+  - assets/js/version-bar.js
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css

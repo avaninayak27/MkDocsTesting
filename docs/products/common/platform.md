@@ -28,7 +28,7 @@ GTS is the unified development environment for all Talaria products. It includes
 - Over-the-air (OTA) update framework
 - Power profiler
 
-{% if internal %}
+{% if extra.internal %}
 ## Internal: Platform Errata
 
 > [!CAUTION] ENGINEERING ONLY

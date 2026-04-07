@@ -2,6 +2,8 @@
 
 The **Yo** is InnoPhase IoT's high-performance SoC designed for edge AI and gateway applications requiring significant compute power alongside wireless connectivity.
 
+--8<-- "snippets/t6-summary.md"
+
 ## Key Specifications
 
 | Parameter | Value |
@@ -29,10 +31,9 @@ The Yo includes all [Common Platform](../common/platform.md) capabilities, plus:
 - USB 2.0 host/device
 - Ethernet MAC interface
 
-{% if internal %}
+{% if extra.internal %}
 ## Internal: Yo Development Notes
 
 > [!CAUTION] ENGINEERING ONLY
 > **Yo is pre-silicon.** All specifications are based on RTL simulation. Do not share power numbers externally — final silicon measurements will differ by ±15%. Tape-out scheduled for Q4 2026.
-
 {% endif %}

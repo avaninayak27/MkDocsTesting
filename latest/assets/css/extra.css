@@ -11,9 +11,9 @@
 
 /* ── Version Bar: reposition below the header using flex order ── */
 
-/* Hide the native mike dropdown from the blue header */
+/* Show the native mike dropdown in the header */
 .md-header .md-version {
-  display: none !important;
+  display: block;
 }
 
 /* Style the version bar that sits below the header */

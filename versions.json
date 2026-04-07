@@ -23,5 +23,10 @@
     "version": "2.1",
     "title": "2.1",
     "aliases": []
+  },
+  {
+    "version": "v2.0-internal",
+    "title": "V2.0 (Internal)",
+    "aliases": []
   }
 ]

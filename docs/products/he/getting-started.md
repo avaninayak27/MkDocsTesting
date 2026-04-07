@@ -2,7 +2,7 @@
 
 The **He** is InnoPhase IoT's flagship ultra-low-power Wi-Fi SoC, designed for battery-operated IoT sensors and smart home devices.
 
---8<-- "docs/snippets/t6-summary.md"
+--8<-- "snippets/t6-summary.md"
 
 For an overview, please refer to the [Introduction](Introduction.md).
 

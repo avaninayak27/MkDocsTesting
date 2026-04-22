@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="group__he__wifi" kind="group">
+    <compoundname>he_wifi</compoundname>
+    <title>Wi-Fi Management</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__he__wifi_1ga4d72d562d627820df9e3f232c14c5884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int he_wifi_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>he_wifi_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the Wi-Fi subsystem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 on success, non-zero error code otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/he_api.h" line="16" column="5" declfile="src/he_api.h" declline="16" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__he__wifi_1ga933d349d88043f9ab6985f3ea4c9c701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int he_wifi_connect</definition>
+        <argsstring>(const char *ssid, const char *password)</argsstring>
+        <name>he_wifi_connect</name>
+        <param>
+          <type>const char *</type>
+          <declname>ssid</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Connect to a Wi-Fi access point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ssid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service Set Identifier of the AP. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Security key for the network. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on connection success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/he_api.h" line="24" column="5" declfile="src/he_api.h" declline="24" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__he__wifi_1ga08f90def1b0a704adb167b343a892fae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float he_wifi_get_rssi</definition>
+        <argsstring>(void)</argsstring>
+        <name>he_wifi_get_rssi</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the current RSSI (Received Signal Strength Indicator). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Signal strength in dBm. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/he_api.h" line="30" column="7" declfile="src/he_api.h" declline="30" declcolumn="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Functions for managing Wi-Fi connectivity. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

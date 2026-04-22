@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="he__api_8h" kind="file" language="C++">
+    <compoundname>he_api.h</compoundname>
+    <sectiondef kind="func">
+      <member refid="group__he__wifi_1ga4d72d562d627820df9e3f232c14c5884" kind="function"><name>he_wifi_init</name></member>
+      <member refid="group__he__wifi_1ga933d349d88043f9ab6985f3ea4c9c701" kind="function"><name>he_wifi_connect</name></member>
+      <member refid="group__he__wifi_1ga08f90def1b0a704adb167b343a892fae" kind="function"><name>he_wifi_get_rssi</name></member>
+      <member refid="group__he__power_1ga957c96cf2fc66d6355595f959e4590ad" kind="function"><name>he_set_sleep_mode</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>API for InnoPhase IoT He Ultra-Low-Power Wi-Fi SoC. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="group__he__wifi_1ga4d72d562d627820df9e3f232c14c5884" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__he__wifi_1ga4d72d562d627820df9e3f232c14c5884" kindref="member">he_wifi_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="group__he__wifi_1ga933d349d88043f9ab6985f3ea4c9c701" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__he__wifi_1ga933d349d88043f9ab6985f3ea4c9c701" kindref="member">he_wifi_connect</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ssid,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>password);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="group__he__wifi_1ga08f90def1b0a704adb167b343a892fae" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="group__he__wifi_1ga08f90def1b0a704adb167b343a892fae" kindref="member">he_wifi_get_rssi</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="group__he__power_1ga957c96cf2fc66d6355595f959e4590ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__he__power_1ga957c96cf2fc66d6355595f959e4590ad" kindref="member">he_set_sleep_mode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/he_api.h"/>
+  </compounddef>
+</doxygen>

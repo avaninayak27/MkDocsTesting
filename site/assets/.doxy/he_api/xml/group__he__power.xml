@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="group__he__power" kind="group">
+    <compoundname>he_power</compoundname>
+    <title>Power Management</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__he__power_1ga957c96cf2fc66d6355595f959e4590ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void he_set_sleep_mode</definition>
+        <argsstring>(int mode)</argsstring>
+        <name>he_set_sleep_mode</name>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Set the sleep mode for the SoC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0 for Active, 1 for Light Sleep, 2 for Deep Sleep. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/he_api.h" line="44" column="6" declfile="src/he_api.h" declline="44" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Functions for ultra-low-power optimization. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,211 @@
+site_name: "VERIFICATION BUILD - MkDocs Eval"
+site_description: "Full plugin evaluation – MkDocs Material theme"
+site_author: "Your Organisation"
+site_url: "http://localhost/mkdocs/"
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+repo_name: your-org/docs
+repo_url: https://github.com/your-org/docs
+edit_uri: edit/main/docs/
+copyright: "Copyright &copy; 2025 Your Organisation"
+
+nav:
+  - API Reference: api/index.md
+  - Home: index.md
+  - Products:
+      - Overview: products/index.md
+      - Common Platform: products/common/platform.md
+      - He (Ultra-Low-Power):
+          - Getting Started: products/he/getting-started.md
+      - Ne (Multi-Protocol):
+          - Getting Started: products/ne/getting-started.md
+      - Yo (Edge Computing):
+          - Getting Started: products/yo/getting-started.md
+  - Demo:
+      - Welcome: demo/index.md
+      - Register Comparison: demo/register_demo.md
+      - Tags Demonstration: demo/tags_test.md
+      - Introduction: demo/Introduction.md
+  - Technical Documents - Layer 1:
+      - demo/Level1/testAvani.md
+  - Technical Documents - Layer 2:
+      - demo/Level2/testAvanicopy2.md
+      - demo/Level2/testAvanicopy.md
+      - demo/Level2/testAvani.md
+  - Setup Instructions: demo/SetupInstructions.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - navigation.tabs
+
+plugins:
+  - search:
+      lang: en
+  # tags_file deprecated – use tags without it; Material auto-generates the page
+  - tags
+  - section-index
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      zoomable: true
+      draggable: true
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+  - redirects:
+      redirect_maps:
+        'old-page.md': 'reference/index.md'
+      # Note: redirect sources are relative to docs_dir
+  - include-markdown
+  # macros MUST come before table-reader
+  - macros:
+      include_yaml:
+        - docs/assets/variables.yml
+  - table-reader
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            docstring_style: google
+            merge_init_into_class: true
+  - swagger-ui-tag
+  - mkdoxy:
+      doxygen-bin-path: "C:\\Program Files\\doxygen\\bin\\doxygen.exe"
+      projects:
+        he_api:
+          src-dirs: src
+          full-doc: true
+          doxy-cfg:
+            FILE_PATTERNS: "*.h *.c"
+            RECURSIVE: true
+            OPTIMIZE_OUTPUT_FOR_C: true
+            EXTRACT_ALL: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      base_path: ["docs"]
+  - tables
+  - footnotes
+  - attr_list
+  - md_in_html
+  - def_list
+  - abbr
+  - meta
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/contrib/auto-render.min.js
+  - assets/js/katex.js
+  - assets/js/version-bar.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css
+  - assets/css/extra.css
+
+extra:
+  internal: false
+  version_list:
+    - title: "v2.2 (Latest)"
+      url: "."
+    - title: "v2.1"
+      url: "https://github.com/your-org/docs/releases/tag/v2.1"
+    - title: "V2.0"
+      url: "https://github.com/your-org/docs/releases/tag/V2.0"
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-org
+    - icon: fontawesome/brands/slack
+      link: https://your-org.slack.com
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks! Help us improve by opening an issue.
+  generator: false
+
+  generator: false

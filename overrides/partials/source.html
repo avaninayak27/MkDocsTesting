@@ -1,0 +1,61 @@
+<div id="hidden-version-wrapper" style="display: none;">
+<!-- Version Selector Injected Before Source Icon -->
+<div class="custom-version-selector" style="display: flex; align-items: center; margin-right: 15px; margin-left: 10px; z-index: 100;">
+  <span style="color: var(--md-primary-bg-color); font-weight: 500; font-size: 0.8rem; margin-right: 6px; opacity: 0.9;">Version:</span>
+  <div class="md-version" style="position: relative;">
+    <button onclick="this.parentElement.classList.toggle('md-version--active')" class="md-version__current" style="background: rgba(255, 255, 255, 0.15); color: var(--md-primary-bg-color); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; padding: 4px 10px; font-size: 0.8rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: background 0.2s;">
+      {% if config.extra.version_list %}{{ config.extra.version_list[0].title }}{% else %}Latest{% endif %}
+      <span style="font-size: 0.7rem;">▼</span>
+    </button>
+    <ul class="md-version__list-custom" style="position: absolute; top: calc(100% + 6px); right: 0; background-color: var(--md-default-bg-color); color: var(--md-default-fg-color); list-style: none; padding: 6px 0; margin: 0; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); border: 1px solid var(--md-default-fg-color--lightest); min-width: 160px; z-index: 9999; max-height: 300px; overflow-y: auto;">
+      {% for v in config.extra.version_list %}
+        <li style="margin: 0; padding: 0; border-bottom: 1px solid var(--md-default-fg-color--lightest);">
+          <a href="{{ v.url }}" style="display: block; padding: 10px 16px; color: var(--md-default-fg-color); text-decoration: none; font-size: 0.85rem; font-weight: bold; transition: background 0.15s;">
+            {{ v.title }}
+          </a>
+          {% if v.topics %}
+            <div style="padding: 0 16px 8px 24px; display: flex; flex-direction: column; gap: 4px;">
+              {% for topic in v.topics %}
+                <span style="font-size: 0.7rem; color: var(--md-default-fg-color--light); opacity: 0.8; display: flex; align-items: center; gap: 6px;">
+                  <span style="width: 4px; height: 4px; background: var(--md-primary-fg-color); border-radius: 50%;"></span>
+                  {{ topic }}
+                </span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </li>
+      {% else %}
+        <li style="margin: 0; padding: 0;">
+          <a href="." style="display: block; padding: 8px 16px; color: var(--md-default-fg-color); text-decoration: none; font-size: 0.85rem; white-space: nowrap;">Latest</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+</div>
+
+<style>
+  /* Version dropdown toggle via button click */
+  .md-version--active .md-version__list-custom { display: block !important; }
+  .custom-version-selector .md-version__list-custom { display: none; }
+  .custom-version-selector .md-version__current:hover { background: rgba(255, 255, 255, 0.25) !important; }
+  .md-version__list-custom a:hover { background-color: var(--md-primary-fg-color) !important; color: var(--md-primary-bg-color) !important; }
+  /* Also support pure CSS hover for desktops */
+  .custom-version-selector:hover .md-version__list-custom { display: block !important; }
+</style>
+
+<!-- Original Repository information -->
+<a
+  href="{{ config.repo_url }}"
+  title="{{ lang.t('source') }}"
+  class="md-source"
+  data-md-component="source"
+>
+  <div class="md-source__icon md-icon">
+    {% set icon = config.theme.icon.repo or "fontawesome/brands/git-alt" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  </div>
+  <div class="md-source__repository">
+    {{ config.repo_name }}
+  </div>
+</a>

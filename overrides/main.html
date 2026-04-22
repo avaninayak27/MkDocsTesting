@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block header %}
-  {# The native header handles the version dropdown automatically via the 'mike' provider #}
-  {{ super() }}
+{% block announce %}
+  <!-- Nuke the old announce bar to prevent the huge white box from appearing regardless of mkdocs config -->
 {% endblock %}
+
+

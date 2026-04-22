@@ -1,0 +1,99 @@
+/* Wider content area for eval */
+.md-grid { max-width: 1400px; }
+
+/* Subtle eval banner tint */
+.md-header { box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+
+/* Improve table readability */
+.md-typeset table:not([class]) th { background-color: var(--md-primary-fg-color); color: var(--md-primary-bg-color); }
+
+/* ── Custom Version Selector in Header ── */
+.custom-version-selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.custom-version__label {
+  color: var(--md-primary-bg-color);
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  opacity: 0.8;
+}
+
+.custom-version-selector .md-version {
+  position: relative;
+}
+
+.custom-version-selector .md-version__current {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--md-primary-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.custom-version-selector .md-version__current:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.custom-version-selector .twemoji svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.custom-version-selector .md-version__list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.3rem;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  min-width: 120px;
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Ensure the dropdown list is visible on hover */
+.custom-version-selector:hover .md-version__list,
+.custom-version-selector .md-version__current:focus + .md-version__list,
+.custom-version-selector .md-version__list:hover {
+  display: block;
+}
+
+.custom-version-selector .md-version__item {
+  padding: 0;
+  margin: 0;
+}
+
+.custom-version-selector .md-version__link {
+  display: block;
+  padding: 0.4rem 1rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.custom-version-selector .md-version__link:hover {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}

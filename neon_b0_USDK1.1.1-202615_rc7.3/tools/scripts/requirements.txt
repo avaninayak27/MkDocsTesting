@@ -1,0 +1,4 @@
+psutil
+func_timeout
+pygdbmi
+intelhex

@@ -23,7 +23,11 @@ RUN pip install --no-cache-dir \
     pillow
 
 COPY docs/ docs/
+COPY overrides/ overrides/
 COPY mkdocs.yml .
+COPY mkdocs*.yml ./
+COPY .git/ .git/
+COPY version_macros.py .
 
 RUN mkdocs build
 

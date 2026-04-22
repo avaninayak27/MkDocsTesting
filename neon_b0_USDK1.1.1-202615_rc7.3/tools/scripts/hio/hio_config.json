@@ -1,0 +1,52 @@
+{
+    "sys": {
+        "group_id": 0,
+        "header_file_path": "apu/middleware/hio/inc/api",
+        "c_file_path": "apu/middleware/hio/src/api",
+        "cogg_py_path": "scripts/hio/api",
+        "enable": true
+    },
+    "debug": {
+        "group_id": 8,
+        "header_file_path": "apu/middleware/hio/inc/api",
+        "c_file_path": "apu/middleware/hio/src/api",
+        "cogg_py_path": "scripts/hio/api",
+        "enable": true
+    },
+    "wifi": {
+        "group_id": 2,
+        "header_file_path": "apu/middleware/hio/inc/api",
+        "c_file_path": "apu/middleware/hio/src/api",
+        "cogg_py_path": "scripts/hio/api",
+        "enable": false
+    },
+    "flash": {
+        "group_id": 3,
+        "header_file_path": "apu/middleware/hio/inc/api",
+        "c_file_path": "apu/middleware/hio/src/api",
+        "cogg_py_path": "scripts/hio/api",
+        "enable": true
+    },
+    "iperf3": {
+        "group_id": 4,
+        "header_file_path": "apu/middleware/hio/inc/api",
+        "c_file_path": "apu/middleware/hio/src/api",
+        "cogg_py_path": "scripts/hio/api",
+        "enable": true
+    },
+    "ping": {
+        "group_id": 5,
+        "header_file_path": "apu/middleware/hio/inc/api",
+        "c_file_path": "apu/middleware/hio/src/api",
+        "cogg_py_path": "scripts/hio/api",
+        "enable": true
+    },
+    "wifi_mon": {
+        "group_id": 6,
+        "header_file_path": "apu/middleware/hio/inc/api",
+        "c_file_path": "apu/middleware/hio/src/api",
+        "cogg_py_path": "scripts/hio/api",
+        "enable": true
+    }
+}
+

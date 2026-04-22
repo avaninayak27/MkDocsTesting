@@ -1,0 +1,17 @@
+site_name: "FINAL VERIFICATION BUILD"
+site_description: "Full plugin evaluation – MkDocs Material theme"
+site_author: "Your Organisation"
+site_url: "http://localhost/mkdocs/"
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  custom_dir: overrides
+plugins:
+  - search
+  - macros:
+      include_yaml:
+        - docs/assets/variables.yml
+extra:
+  announce: "Version Selector"
+  internal: false

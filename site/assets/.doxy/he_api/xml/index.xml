@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
+  <compound refid="he__api_8h" kind="file"><name>he_api.h</name>
+    <member refid="group__he__wifi_1ga4d72d562d627820df9e3f232c14c5884" kind="function"><name>he_wifi_init</name></member>
+    <member refid="group__he__wifi_1ga933d349d88043f9ab6985f3ea4c9c701" kind="function"><name>he_wifi_connect</name></member>
+    <member refid="group__he__wifi_1ga08f90def1b0a704adb167b343a892fae" kind="function"><name>he_wifi_get_rssi</name></member>
+    <member refid="group__he__power_1ga957c96cf2fc66d6355595f959e4590ad" kind="function"><name>he_set_sleep_mode</name></member>
+  </compound>
+  <compound refid="group__he__wifi" kind="group"><name>he_wifi</name>
+    <member refid="group__he__wifi_1ga4d72d562d627820df9e3f232c14c5884" kind="function"><name>he_wifi_init</name></member>
+    <member refid="group__he__wifi_1ga933d349d88043f9ab6985f3ea4c9c701" kind="function"><name>he_wifi_connect</name></member>
+    <member refid="group__he__wifi_1ga08f90def1b0a704adb167b343a892fae" kind="function"><name>he_wifi_get_rssi</name></member>
+  </compound>
+  <compound refid="group__he__power" kind="group"><name>he_power</name>
+    <member refid="group__he__power_1ga957c96cf2fc66d6355595f959e4590ad" kind="function"><name>he_set_sleep_mode</name></member>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

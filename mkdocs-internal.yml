@@ -32,6 +32,7 @@ nav:
       - demo/Level2/testAvanicopy.md
       - demo/Level2/testAvani.md
   - Setup Instructions: demo/SetupInstructions.md
+  - API Reference: api/index.md
 
 theme:
   name: material
@@ -83,6 +84,17 @@ plugins:
   - macros:
       include_yaml:
         - docs/assets/variables.yml
+  - mkdoxy:
+      doxygen-bin-path: "C:\\Program Files\\doxygen\\bin\\doxygen.exe"
+      projects:
+        he_api:
+          src-dirs: src
+          full-doc: true
+          doxy-cfg:
+            FILE_PATTERNS: "*.h *.c"
+            RECURSIVE: true
+            OPTIMIZE_OUTPUT_FOR_C: true
+            EXTRACT_ALL: true
 
 markdown_extensions:
   - admonition
@@ -131,3 +143,12 @@ extra:
   version:
     provider: mike
   internal: true
+  version_list:
+    - title: "v2.2 (Latest)"
+      url: "."
+    - title: "v2.1"
+      url: "https://github.com/your-org/docs/releases/tag/v2.1"
+    - title: "V2.0"
+      url: "https://github.com/your-org/docs/releases/tag/V2.0"
+    - title: "V1.0"
+      url: "https://github.com/your-org/docs/releases/tag/V1.0"

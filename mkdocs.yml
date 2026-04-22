@@ -1,4 +1,4 @@
-site_name: "Documentation Appliance – MkDocs Eval"
+site_name: "API INTEGRATION TEST SITE"
 site_description: "Full plugin evaluation – MkDocs Material theme"
 site_author: "Your Organisation"
 site_url: "http://localhost/mkdocs/"
@@ -12,6 +12,7 @@ edit_uri: edit/main/docs/
 copyright: "Copyright &copy; 2025 Your Organisation"
 
 nav:
+  - API Reference: api_ref/files.md
   - Home: index.md
   - Products:
       - Overview: products/index.md
@@ -33,6 +34,7 @@ nav:
       - demo/Level2/testAvanicopy2.md
       - demo/Level2/testAvanicopy.md
       - demo/Level2/testAvani.md
+  - Setup Instructions: demo/SetupInstructions.md
   - Setup Instructions: demo/SetupInstructions.md
 
 theme:
@@ -115,6 +117,24 @@ plugins:
             docstring_style: google
             merge_init_into_class: true
   - swagger-ui-tag
+  - mkdoxy:
+      doxygen-bin-path: "C:\\Program Files\\doxygen\\bin\\doxygen.exe"
+      projects:
+        api_ref:
+          src-dirs: "C:\\Users\\anayak\\OneDrive - InnoPhase IoT, Inc\\Documents\\Tool Testing\\mkdocs"
+          full-doc: true
+          extract-all: true
+          debug: true
+          doxy-cfg:
+            INPUT: "."
+            FILE_PATTERNS: "*.h *.c *.cpp *.hpp"
+            RECURSIVE: "YES"
+            GENERATE_XML: "YES"
+            OPTIMIZE_OUTPUT_FOR_C: "YES"
+            EXTRACT_ALL: "YES"
+            EXTRACT_PRIVATE: "YES"
+            EXTRACT_STATIC: "YES"
+            EXTENSION_MAPPING: "h=C"
 
 markdown_extensions:
   - admonition
@@ -169,9 +189,20 @@ extra_css:
   - assets/css/extra.css
 
 extra:
-  version:
-    provider: mike
   internal: false
+  version_list:
+    - title: "v2.2 (Latest)"
+      url: "."
+      topics: ["Home", "Products", "Demo", "Technical Documents"]
+    - title: "v2.1"
+      url: "../2.1/"
+      topics: ["Home", "Products"]
+    - title: "V2.0"
+      url: "../V2.0/"
+      topics: ["Home", "Products", "Demo", "Setup Instructions"]
+    - title: "V1.0"
+      url: "../V1.0/"
+      topics: ["Getting Started", "Reference"]
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/your-org
